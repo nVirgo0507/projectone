@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyPage(title: 'Hello there'), // Use MyPage directly
-  ));
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyPage(title: 'Hello there'), // Use MyPage directly
+    ),
+  );
 }
 
 class MyPage extends StatelessWidget {
@@ -15,9 +17,7 @@ class MyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
+      appBar: AppBar(title: Text(title)),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -62,9 +62,6 @@ class MyPage extends StatelessWidget {
   }
 
   Widget _buildSmallButton(String text) {
-    return ElevatedButton(
-      onPressed: () {},
-      child: Text(text),
-    );
+    return ElevatedButton(onPressed: () {}, child: Text(text));
   }
 }

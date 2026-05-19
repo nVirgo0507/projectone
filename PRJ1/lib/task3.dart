@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyPage(title: 'Hello there'), // Use MyPage directly
-  ));
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyPage(title: 'Hello there'), // Use MyPage directly
+    ),
+  );
 }
 
 class MyPage extends StatelessWidget {
-final String title;
+  final String title;
 
-const MyPage({super.key, required this.title});
+  const MyPage({super.key, required this.title});
 
-@override
-Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  AppBar(title: Text(title)),
+      appBar: AppBar(title: Text(title)),
       body: Padding(
         padding: const EdgeInsets.only(top: 220.0),
         child: Row(
@@ -33,13 +35,13 @@ Widget build(BuildContext context) {
             SizedBox(width: 80),
 
             Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
                 _buildBoldText('Item 2'),
                 _buildBoldText('Item 2'),
                 _buildBoldText('Item 2'),
-          ],
+              ],
             ),
           ],
         ),

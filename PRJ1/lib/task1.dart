@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Task1(title: 'This is the homepage'),
-  ));
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Task1(title: 'This is the homepage'),
+    ),
+  );
 }
 
 class Task1 extends StatelessWidget {
@@ -20,10 +22,7 @@ class Task1 extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              Colors.blueAccent,
-              Colors.white,
-            ],
+            colors: [Colors.blueAccent, Colors.white],
           ),
         ),
         child: const Center(
